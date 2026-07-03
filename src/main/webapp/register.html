@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Foodie Register</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#fff7f0;
+}
+
+.container{
+    width:950px;
+    height:650px;
+    background:#fff;
+    display:flex;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.left{
+    flex:1;
+    background:#fc8019;
+    color:white;
+    padding:60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.left h1{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.left p{
+    font-size:18px;
+    line-height:30px;
+}
+
+.right{
+    flex:1;
+    padding:50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.logo{
+    font-size:35px;
+    color:#fc8019;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+h2{
+    margin-bottom:20px;
+    color:#333;
+}
+
+.input-box{
+    margin-bottom:18px;
+}
+
+.input-box input{
+    width:100%;
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:15px;
+    outline:none;
+}
+
+.input-box input:focus{
+    border-color:#fc8019;
+}
+
+.btn{
+    width:100%;
+    padding:15px;
+    background:#fc8019;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.btn:hover{
+    background:#e66b00;
+}
+
+.bottom{
+    margin-top:20px;
+    text-align:center;
+}
+
+.bottom a{
+    color:#fc8019;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.bottom a:hover{
+    text-decoration:underline;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="left">
+
+<h1>Create Account</h1>
+
+<p>
+Join Foodie today and enjoy delicious food delivered to your doorstep.
+</p>
+
+</div>
+
+<div class="right">
+
+<div class="logo">
+🍔 Foodie
+</div>
+
+<h2>Register</h2>
+
+<form action="RegisterServlet" method="post">
+
+<div class="input-box">
+<input type="text"
+name="name"
+placeholder="Full Name"
+required>
+</div>
+
+<div class="input-box">
+<input type="email"
+name="email"
+placeholder="Email Address"
+required>
+</div>
+
+<div class="input-box">
+<input type="password"
+name="password"
+placeholder="Password"
+required>
+</div>
+
+<div class="input-box">
+<input type="text"
+name="address"
+placeholder="Address"
+required>
+</div>
+
+<button type="submit" class="btn">
+Create Account
+</button>
+
+</form>
+
+<div class="bottom">
+
+Already have an account?
+
+<a href="login.jsp">
+Login
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

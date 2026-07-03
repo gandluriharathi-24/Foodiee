@@ -1,0 +1,180 @@
+```jsp
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Foodie Login</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#fff7f0;
+}
+
+.container{
+    width:900px;
+    height:550px;
+    background:white;
+    display:flex;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.left{
+    flex:1;
+    background:#fc8019;
+    color:white;
+    padding:60px;
+}
+
+.left h1{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.left p{
+    font-size:18px;
+    line-height:30px;
+}
+
+.right{
+    flex:1;
+    padding:60px;
+}
+
+.logo{
+    color:#fc8019;
+    font-size:35px;
+    font-weight:bold;
+    margin-bottom:30px;
+}
+
+h2{
+    margin-bottom:25px;
+}
+
+.input-box{
+    margin-bottom:20px;
+}
+
+.input-box input{
+    width:100%;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:15px;
+}
+
+.btn{
+    width:100%;
+    background:#fc8019;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#e46f0b;
+}
+
+.bottom{
+    margin-top:20px;
+    text-align:center;
+}
+
+.bottom a{
+    color:#fc8019;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.error{
+    color:red;
+    text-align:center;
+    margin-bottom:15px;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left">
+        <h1>Welcome Back!</h1>
+        <p>
+            Login to continue ordering your favorite food from top restaurants.
+        </p>
+    </div>
+
+    <div class="right">
+
+        <div class="logo">Foodie!</div>
+
+        <h2>Login</h2>
+
+        <% String error = (String)request.getAttribute("error");
+           if(error != null){
+        %>
+
+            <div class="error">
+                <%= error %>
+            </div>
+
+        <% } %>
+
+        <form action="LoginServlet" method="post">
+
+            <div class="input-box">
+                <input type="email"
+                       name="email"
+                       placeholder="Enter Email"
+                       required>
+            </div>
+
+            <div class="input-box">
+                <input type="password"
+                       name="password"
+                       placeholder="Enter Password"
+                       required>
+            </div>
+
+            <button type="submit" class="btn">
+                Login
+            </button>
+
+        </form>
+
+        <div class="bottom">
+            New User?
+            <a href="register.jsp">Register</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+```
